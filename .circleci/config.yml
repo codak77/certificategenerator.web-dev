@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: update-npm
-          command: 'sudo npm install -g'
+          command: "sudo npm install -g"
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -39,4 +39,4 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - dev
